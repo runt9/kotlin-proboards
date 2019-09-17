@@ -1,0 +1,1 @@
+data class Data<T>(val key: String, val value: T?)
