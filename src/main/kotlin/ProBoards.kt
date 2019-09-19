@@ -98,3 +98,6 @@ external object ProBoards {
      */
     fun unsaved_changes(): Boolean
 }
+
+@Suppress("unused")
+val pb = ProBoards
