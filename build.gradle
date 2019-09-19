@@ -3,10 +3,9 @@ plugins {
     id 'maven-publish'
 }
 
-group 'com.runt9'
-
 repositories {
     mavenCentral()
+    jcenter()
 
     maven {
         url "https://kotlin.bintray.com/js-externals"
