@@ -1,3 +1,8 @@
+@file:Suppress("unused", "FunctionName")
+
+import data.RouteData
+import data.UserData
+import data.page.Page
 import js.externals.jquery.JQuery
 import org.w3c.dom.Node
 
@@ -12,7 +17,6 @@ import org.w3c.dom.Node
  *
  * All of this code is meant to conform to the ProBoards API found at https://www.proboards.com/developer/js/
  */
-@Suppress("unused", "FunctionName")
 external object ProBoards {
     val board: BoardUtility = definedExternally
     val date: DateUtility = definedExternally
@@ -99,5 +103,8 @@ external object ProBoards {
     fun unsaved_changes(): Boolean
 }
 
-@Suppress("unused")
+fun ProBoards.routeData() = pb.data<RouteData>("route")
+fun ProBoards.userData() = pb.data<UserData>("user")
+fun ProBoards.pageData() = pb.data<Map<String, Page>>("page")
+
 val pb = ProBoards
