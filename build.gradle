@@ -16,3 +16,16 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-js"
     implementation 'kotlin.js.externals:kotlin-js-jquery:3.2.0-0'
 }
+
+publishing {
+    publications {
+        publication(MavenPublication) {
+            artifact JsJar
+            artifact kotlinSourcesJar
+
+            repositories {
+                mavenLocal()
+            }
+        }
+    }
+}
