@@ -1,7 +1,17 @@
 import js.externals.jquery.JQuery
 import org.w3c.dom.Node
 
-// TODO: Update all JavaDocs to match API docs from ProBoards
+/**
+ * The ProBoards JavaScript API is a reference designed to ease the process of developing plugins and codes for ProBoards forums.
+ * The functions listed here are all officially supported by ProBoards, and while other functions exist and may work,
+ * ProBoards makes no guarantee about forward compatibility of any functions not explicitly listed here.
+ *
+ * For more help with anything in the API, the ProBoards Support forum maintains a plugin board that is a popular
+ * place for many of the advanced coders on ProBoards to hang out and offer help.
+ * You can visit this board here: http://support.proboards.com/board/38/plugins
+ *
+ * All of this code is meant to conform to the ProBoards API found at https://www.proboards.com/developer/js/
+ */
 @Suppress("unused", "FunctionName")
 external object ProBoards {
     val board: BoardUtility = definedExternally
@@ -43,7 +53,7 @@ external object ProBoards {
      * Allows bulk creation of data keys. If a key is given with a null value,
      * that key and associated data will be deleted
      *
-     * @param List of Data entries
+     * @param values List of Data entries
      */
     fun <T> data(values: List<Data<T>>)
 
