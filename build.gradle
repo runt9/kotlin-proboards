@@ -4,7 +4,6 @@ plugins {
 }
 
 group 'com.runt9'
-version '0.0.1'
 
 repositories {
     mavenCentral()
