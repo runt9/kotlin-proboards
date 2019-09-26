@@ -7,4 +7,4 @@ data class ConversationPage(
     val is_archived: Int,
     val is_new: Int,
     val url: String
-) : Page
+)

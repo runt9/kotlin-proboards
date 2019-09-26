@@ -10,7 +10,7 @@ external class PluginUtility {
      * @param name The name of the plugin to retrieve.
      * @return The author-defined settings for this plugin.
      */
-    fun get(name: String): Plugin
+    fun get(name: String): Plugin?
 
     /**
      * Returns a handle to the plugin key object with the given key.
@@ -18,7 +18,7 @@ external class PluginUtility {
      * @param key The identifying string for this key.
      * @return The plugin key with the passed-in key name.
      */
-    fun <T> key(key: String): Key<T>
+    fun <T> key(key: String): Key<T>?
 
     /**
      * Returns a reference object with all plugin key types listed.

@@ -1,8 +1,8 @@
-@file:Suppress("unused", "FunctionName")
+@file:Suppress("unused", "FunctionName", "ClassName")
 
 import data.RouteData
 import data.UserData
-import data.page.Page
+import data.page.PageData
 import js.externals.jquery.JQuery
 import org.w3c.dom.Node
 
@@ -25,6 +25,7 @@ external object ProBoards {
     val image: ImageUtility = definedExternally
     val member: MemberUtility = definedExternally
     val number: NumberUtility = definedExternally
+    val plugin: PluginUtility = definedExternally
     val text: TextUtility = definedExternally
     val thread: ThreadUtility = definedExternally
 
@@ -103,8 +104,8 @@ external object ProBoards {
     fun unsaved_changes(): Boolean
 }
 
-fun ProBoards.routeData() = pb.data<RouteData>("route")
-fun ProBoards.userData() = pb.data<UserData>("user")
-fun ProBoards.pageData() = pb.data<Map<String, Page>>("page")
+fun ProBoards.routeData() = data<RouteData>("route")
+fun ProBoards.userData() = data<UserData>("user")
+fun ProBoards.pageData() = data<PageData>("page")
 
-val pb = ProBoards
+external val pb: ProBoards = definedExternally

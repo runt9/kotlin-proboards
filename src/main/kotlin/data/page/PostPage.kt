@@ -8,4 +8,4 @@ data class PostPage(
     val liked: Int,
     val thread_id: Long,
     val url: String
-) : Page
+)

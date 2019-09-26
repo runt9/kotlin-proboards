@@ -13,4 +13,4 @@ data class BoardPage(
     val show_announcements: Int,
     val threads: Int,
     val url: String
-) : Page
+)

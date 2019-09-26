@@ -6,4 +6,4 @@ data class MemberPage(
     val is_deleted: Int,
     val name: String,
     val url: String
-) : Page
+)
